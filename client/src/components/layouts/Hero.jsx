@@ -2,10 +2,10 @@ import React from 'react'
 
 function Hero() {
   return (
-    <div>  <section className="pt-12 bg-gray-50 sm:pt-16">
+    <div>  <section className="pt-12 bg-gray-50 sm:pt-16 min-w-fit overflow-x-hidden">
     <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="max-w-2xl mx-auto text-center">
-            <h1 className="px-6 text-lg text-gray-600 font-inter">Smart email campaign builder, made for Developers</h1>
+            <h1 className="px-6 text-lg text-gray-600 font-inter">Generate AI based images</h1>
             <p className="mt-5 text-4xl font-bold leading-tight text-gray-900 sm:leading-tight sm:text-5xl lg:text-6xl lg:leading-tight font-pj">
                 Turn your Imagination
                 <span className="relative inline-flex sm:inline">
