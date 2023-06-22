@@ -25,7 +25,6 @@ export default function NavBar() {
     
     return <>
      
-
         <div>
             <nav className="flex items-center justify-between flex-wrap bg-emerald-700 p-6 overflow-x-hidden min-w-fit">
                 <div className="flex items-center flex-shrink-0 text-white mr-6">
