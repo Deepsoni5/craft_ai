@@ -2,8 +2,8 @@
 import React from 'react'
 const axios = require("axios")
 function page() {
-  const google = () =>{
-        window.open("http://localhost:5000/auth/google","_self")
+  const google = async() =>{
+        await axios.get("http://localhost:8000/auth/google")
   }
   return (
     <section class="h-screen  bg-gray-800">

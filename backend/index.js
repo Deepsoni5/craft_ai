@@ -6,7 +6,7 @@ const passportSetup=require("./passport")
 const app = express();
 const authRoute=require("./routes/auth")
 require("dotenv").config();
-const PORT=process.env.PORT || 5000;
+const PORT=process.env.PORT || 8000;
 
 
 app.use(cookieSession({
@@ -17,6 +17,11 @@ app.use(cookieSession({
 
 app.use(passport.initialize())
 app.use(passport.session())
+// app.use((_req,res,next)=>{
+//     res.header('Access-Control-Allow-Origin','*');
+//     res.header('Access-Control-Allow-Headers','*')
+//     next();
+// })
 app.use(cors({
     origin:"http://localhost:3000",
     methods:"GET,POST,PUT,DELETE",
