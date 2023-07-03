@@ -50,5 +50,15 @@ router.get("/logout",(req,res)=>{
     req.logout();
     res.redirect( process.env.CLIENT_URL);
 })
+router.get('/discord/callback', passport.authenticate('discord', {
+    failureRedirect: '/login/failed'
+}), function (req, res) {
+    console.log(req.user)
+    res.redirect(process.env.CLIENT_URL) // Successful auth
+});
+
+router.get('/discord', passport.authenticate('discord'));
+
+
 
 module.exports = router;                

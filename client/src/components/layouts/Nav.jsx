@@ -74,8 +74,14 @@ export default function Nav({user}) {
                                 role="button"
                             >
                                 Logout
-                                    </div>
-                                        <img src={user.photos[0].value} alt="" style={{width:"50px",height:"50px",borderRadius:"50%"}} className='ml-5' />
+                                        </div>
+                                        {
+                                            user.provider=="discord" ? 
+                                                <img className='w-[50px] h-[50px] ml-4 rounded-full' src={`https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}`} />
+                                                :
+                                                <img className='w-[50px] h-[50px] ml-4 rounded-full' src={user.photos[0].value} />
+
+                                        }
                                         </div>
                                 
                             }
